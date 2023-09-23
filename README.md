@@ -55,3 +55,5 @@ vinter_single = VinterAPI(APIKEY, "single_assets")
 vinter_staking = VinterAPI(APIKEY, "staking_yields")
 vinter_nav = VinterAPI(APIKEY, "nav")
 ```
+
+See the [Usage](https://vinter-product-and-development.github.io/vintersdk/examples/) section of the docs for usage examples!
