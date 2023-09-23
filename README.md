@@ -44,7 +44,7 @@ print(vintersdk.__version__)
 from vintersdk import VinterAPI, VinterAPIAsync
 ```
 
-## Creating instances of the VinterAPI class
+## Creating Instances of the VinterAPI class
 
 ```python
 from vintersdk import VinterAPI
