@@ -1,0 +1,124 @@
+site_name: VinterSDK Docs # The name we have defined
+repo_url: https://github.com/rahulmistri1997/vintersdk-pypi
+docs_dir: mdocs
+
+theme:
+  # name: mkdocs
+  name: "material" #Using material theme. There are many other options also
+  logo: "https://images.squarespace-cdn.com/content/v1/5d1c6b091629cd0001317c9e/bddad61c-5e07-4ef2-93b3-d68921fcbc93/favicon.ico?format=100w"
+  favicon: "https://images.squarespace-cdn.com/content/v1/5d1c6b091629cd0001317c9e/bddad61c-5e07-4ef2-93b3-d68921fcbc93/favicon.ico?format=100w"
+  features:
+    # - navigation.instant
+    # -- Tabs TopBar ---
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    # -- Tabs TopBar ---
+    # --- Sidebar-Section ---
+    # - navigation.sections
+    # --- Sidebar-Section ---
+    # - blog
+    # - content.action.edit
+    # - content.action.view
+    # - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+plugins:
+  - search # To have search functionality on the document
+  - autorefs
+  - mkdocstrings:
+      handlers:
+        python:
+          # import:
+          # - url: https://docs.python-requests.org/en/master/objects.inv
+          #   domains: [std, py]
+          paths: [vintersdk]
+          options:
+            docstring_style: numpy
+            allow_inspection: true
+            docstring_options:
+              ignore_init_summary: true
+            docstring_section_style: list
+            use_directory_urls: false
+            filters: ["!^_"]
+            heading_level: 2
+            inherited_members: true
+            merge_init_into_class: true
+            separate_signature: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_signature_annotations: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
+            annotations_path: brief
+            show_docstring_attributes: true
+            summary: true
+  # - blog # If blogs are required enable this (https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/?h=blog#setting-defaults)
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav: # Setting up the navigation. Te below list will be tabs on left panel
+  # - home: README.md # This is the home page
+
+  - Getting Started:
+      - "Getting Started": index.md
+      - "Usage": examples.md
+      - "Multi Specific Usage": multi_asset.md
+      - "Single Specific Usage": single_asset.md
+      - "Websocket Specific Usage": websocket.md
+
+  - Source Code:
+      - Library:
+          - vintersdk_doc/vinter_sdk.md
+          - vintersdk_doc/vinter_sdk_async.md
+          - vintersdk_doc/vinter_sdk_ws.md
+      - Abstraction:
+          - vintersdk_doc/vinter_abc.md
+      - Utility:
+          - vintersdk_doc/config.md
+          - vintersdk_doc/utils.md
+
+  - Tests:
+      - tests_doc/test_api.md
+      - tests_doc/test_async_api.md
+      - tests_doc/test_vinter_utils.md
+      - tests_doc/test_ws.md
