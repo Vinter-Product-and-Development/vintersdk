@@ -1,5 +1,5 @@
 site_name: VinterSDK Docs # The name we have defined
-repo_url: https://github.com/rahulmistri1997/vintersdk-pypi
+repo_url: https://github.com/Vinter-Product-and-Development/vintersdk
 docs_dir: mdocs
 
 theme:
