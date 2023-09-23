@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=38.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vintersdk"
+version = "0.0.1a"
+dependencies = ["httpx>=0.23.3", "websocket-client>=1.5.1"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[metadata]
+description = "The official Python client library for the Vinter.co APIs"
+author = "Rahul Mistri"
+author_email = "rahul@vinter.co"
+
+[tool.setuptools]
+packages = ["vintersdk"]
+
+[project.urls]
+homepage = 'https://vinter-product-and-development.github.io/vintersdk/'
+documentation = 'https://vinter-product-and-development.github.io/vintersdk/'
+repository = 'https://github.com/Vinter-Product-and-Development/vintersdk'
+
+[options]
+python_requires = ">=3.7"
