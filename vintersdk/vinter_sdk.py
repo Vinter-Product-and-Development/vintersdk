@@ -119,6 +119,13 @@ class VinterAPI(VinterAPIABC):
             The latest value for the symbol
 
         """
+        invalid_asset_type_for_value_request = [AssetType.NAV.value]
+
+        if self.asset_type in invalid_asset_type_for_value_request:
+            raise ValueError(
+                f"The asset type {self.asset_type} is not supported for this function"
+            )
+
         data = self.get_latest_data(symbol=symbol)
         return data[0]["value"]
 
