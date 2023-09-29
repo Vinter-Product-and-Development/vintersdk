@@ -179,6 +179,7 @@ class VinterUrl:
         for asset_url in AssetUrl:
             if (
                 asset_url.value["asset_type"].value == asset_type
+                and asset_url.value["frequency"] is not None
                 and asset_url.value["frequency"].value == frequency
             ):
                 url = asset_url.value["url"]
