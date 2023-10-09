@@ -8,4 +8,4 @@ from .utils import (  # noqa
 )
 from .vinter_sdk_ws import VinterAPIWS  # noqa
 
-__version__ = "0.0.1a"
+__version__ = "0.0.1"

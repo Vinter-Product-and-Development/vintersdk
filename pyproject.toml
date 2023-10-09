@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vintersdk"
-version = "0.0.1a"
+version = "0.0.1"
 dependencies = ["httpx>=0.23.3", "websocket-client>=1.5.1"]
 
 [project.readme]
