@@ -4,6 +4,10 @@
 
 The official Python client library for the Vinter.co APIs.
 
+```diff
+- Repository has moved to a new location: https://github.com/kaikodata/vinter-sdk
+```
+
 ## Installation
 
 ```bash
